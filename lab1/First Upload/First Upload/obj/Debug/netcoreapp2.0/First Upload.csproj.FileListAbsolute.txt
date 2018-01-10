@@ -1,0 +1,11 @@
+C:\Users\User\Desktop\PP2 Labs\lab1\First Upload\First Upload\bin\Debug\netcoreapp2.0\First Upload.deps.json
+C:\Users\User\Desktop\PP2 Labs\lab1\First Upload\First Upload\bin\Debug\netcoreapp2.0\First Upload.runtimeconfig.json
+C:\Users\User\Desktop\PP2 Labs\lab1\First Upload\First Upload\bin\Debug\netcoreapp2.0\First Upload.runtimeconfig.dev.json
+C:\Users\User\Desktop\PP2 Labs\lab1\First Upload\First Upload\bin\Debug\netcoreapp2.0\First Upload.dll
+C:\Users\User\Desktop\PP2 Labs\lab1\First Upload\First Upload\bin\Debug\netcoreapp2.0\First Upload.pdb
+C:\Users\User\Desktop\PP2 Labs\lab1\First Upload\First Upload\obj\Debug\netcoreapp2.0\First Upload.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\PP2 Labs\lab1\First Upload\First Upload\obj\Debug\netcoreapp2.0\First Upload.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\PP2 Labs\lab1\First Upload\First Upload\obj\Debug\netcoreapp2.0\First Upload.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\PP2 Labs\lab1\First Upload\First Upload\obj\Debug\netcoreapp2.0\First Upload.AssemblyInfo.cs
+C:\Users\User\Desktop\PP2 Labs\lab1\First Upload\First Upload\obj\Debug\netcoreapp2.0\First Upload.dll
+C:\Users\User\Desktop\PP2 Labs\lab1\First Upload\First Upload\obj\Debug\netcoreapp2.0\First Upload.pdb
