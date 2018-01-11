@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace _1stWork
 {
     class Program
@@ -16,19 +17,27 @@ namespace _1stWork
             for (int i = 0; i < arr.Length; i++)
             {
                 sum = int.Parse(arr[i]);
-                if (sum == 1) Console.WriteLine("NO");
+                if (sum == 1) Console.WriteLine("Prime");
                 else
                 {
-                    int e = 0;
-                    for (int j = 2; j <= sum; j++)
+                    int j = 0;
+                    int cnt = 0;
+                    for (j = 2; j <= (float)Math.Sqrt((float)sum); j++)
                     {
-                        if (sum % j == 0) e++;
+                        if (sum % j == 0)
+                        {
+                            Console.WriteLine("composite");
+                            cnt = 1;
+                            break;
+                        }
                     }
-                    if (e == 1 || sum % 2 != 0) Console.WriteLine("NO");
-                    else Console.WriteLine("YES");
+                    if (cnt == 0)
+                    {
+                        Console.WriteLine("Prime");
+                    }
+                    cnt = 0;
                 }
             }
-
             Console.ReadKey();          
         }
     }
