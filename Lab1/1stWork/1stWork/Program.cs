@@ -11,7 +11,7 @@ namespace _1stWork
     {
         static void Main(string[] args)
         {
-            string line = Console.ReadLine();
+           /* string line = Console.ReadLine();
             string[] arr = line.Split(' ');
             int sum = 0;
             for (int i = 0; i < arr.Length; i++)
@@ -38,7 +38,7 @@ namespace _1stWork
                     cnt = 0;
                 }
             }
-            Console.ReadKey();          
+            Console.ReadKey();    */      
         }
     }
     
