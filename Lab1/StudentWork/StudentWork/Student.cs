@@ -11,18 +11,18 @@ namespace StudentWork
         string firstName;
         string lastName;
         double gpa;
-        
+
         public Student()
         {
             firstName = "firstName";
             lastName = "lastName";
             gpa = 0;
         }
-        public Student(string firstName,string lastName,double gpa)
+        public Student(string firstName, string lastName, double gpa)
         {
             this.firstName = firstName;
             this.lastName = lastName;
-           this.gpa =  gpa;
+            this.gpa = gpa;
         }
         public override string ToString()
         {

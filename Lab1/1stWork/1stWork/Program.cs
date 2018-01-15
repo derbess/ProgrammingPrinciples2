@@ -17,29 +17,27 @@ namespace _1stWork
             for (int i = 0; i < arr.Length; i++)
             {
                 sum = int.Parse(arr[i]);
-                if (sum == 1) Console.WriteLine("Prime");
+                if (sum == 1) Console.WriteLine(arr[i]);
                 else
                 {
                     int j = 0;
                     int cnt = 0;
-                    for (j = 2; j <= (float)Math.Sqrt((float)sum); j++)
+                    for (j = 2; j <= Math.Sqrt(sum); j++)
                     {
                         if (sum % j == 0)
                         {
-                            Console.WriteLine("composite");
+                            //Console.WriteLine("composite");
                             cnt = 1;
                             break;
                         }
                     }
                     if (cnt == 0)
-                    {
-                        Console.WriteLine("Prime");
-                    }
+                    Console.WriteLine(arr[i]);
                     cnt = 0;
                 }
             }
-            Console.ReadKey();         
+            Console.ReadKey();
         }
     }
-    
+
 }

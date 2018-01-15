@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentWork", "StudentWork\StudentWork.csproj", "{8E42373E-3FBB-4F68-9DB1-6AFDE2027854}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RectangleWork1", "RectangleWork1\RectangleWork1.csproj", "{C9737263-B53E-4A03-98A0-EFAC03E8A443}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8E42373E-3FBB-4F68-9DB1-6AFDE2027854}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8E42373E-3FBB-4F68-9DB1-6AFDE2027854}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8E42373E-3FBB-4F68-9DB1-6AFDE2027854}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8E42373E-3FBB-4F68-9DB1-6AFDE2027854}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9737263-B53E-4A03-98A0-EFAC03E8A443}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9737263-B53E-4A03-98A0-EFAC03E8A443}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9737263-B53E-4A03-98A0-EFAC03E8A443}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9737263-B53E-4A03-98A0-EFAC03E8A443}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {19861606-CDFB-48F1-ABF7-7BCD68BE2CF0}
+		SolutionGuid = {383EEFAE-10DA-4B4E-BF6F-8E89A340BCA1}
 	EndGlobalSection
 EndGlobal

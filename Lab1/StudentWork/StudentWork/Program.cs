@@ -13,7 +13,7 @@ namespace StudentWork
             string stdname = Console.ReadLine();
             string stdlast = Console.ReadLine();
             double stdgpa = double.Parse(Console.ReadLine());
-            Student studentt = new Student(stdname,stdlast,stdgpa);
+            Student studentt = new Student(stdname, stdlast, stdgpa);
             Console.WriteLine(studentt);
             Console.ReadKey();
         }

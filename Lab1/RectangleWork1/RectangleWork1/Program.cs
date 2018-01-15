@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace kettik
+namespace RectangleWork1
 {
     class Program
     {
@@ -13,7 +13,7 @@ namespace kettik
             int w = int.Parse(Console.ReadLine());
             int h = int.Parse(Console.ReadLine());
 
-            Rectangle c = new Rectangle(w,h);
+            Rectangle c = new Rectangle(w, h);
             //c.findArea();
 
             Console.WriteLine(c);

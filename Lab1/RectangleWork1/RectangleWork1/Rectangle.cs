@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace kettik
+namespace RectangleWork1
 {
     class Rectangle
     {
@@ -18,13 +18,13 @@ namespace kettik
             width = 0;
             height = 0;
         }
-        public Rectangle(int width,int height)
+        public Rectangle(int width, int height)
         {
             this.width = width;
             this.height = height;
             findPerimeter();
             findArea();
-            
+
         }
         public void findPerimeter()
         {
