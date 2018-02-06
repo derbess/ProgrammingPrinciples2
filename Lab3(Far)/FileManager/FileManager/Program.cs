@@ -10,7 +10,7 @@ namespace FileManager
 {
     class Program
     {
-        static void refresh(DirectoryInfo directory, int cursor)
+        static void Refresh(DirectoryInfo directory, int cursor)
         {
             Console.BackgroundColor = ConsoleColor.Black;
             Console.Clear();
@@ -37,7 +37,7 @@ namespace FileManager
             DirectoryInfo Dir = new DirectoryInfo(@"C:\");
             int cursor = 0;
             int n = Dir.GetFileSystemInfos().Length - 1;
-            refresh(Dir, cursor);
+            Refresh(Dir, cursor);
             bool onoff = true;
             while(onoff)
             {
@@ -62,9 +62,31 @@ namespace FileManager
                         }
                         else
                         {
-
+                            StreamReader sr = new StreamReader(Dir.GetFileSystemInfos()[cursor].FullName);
+                            string s = sr.ReadToEnd();
+                            Console.Clear();
+                            Console.BackgroundColor = ConsoleColor.Black;
+                            Console.ForegroundColor = ConsoleColor.White;
+                            Console.WriteLine(s);
+                            Console.ReadKey();
                         }
+                        break;
+                    case ConsoleKey.Backspace:
+                        if (Dir.Parent != null)
+                        {
+                            Dir = Dir.Parent;
+                            cursor = 0;
+                            n = Dir.GetFileSystemInfos().Length-1;
+                        }
+                        break;
+                    case ConsoleKey.Escape:
+                        onoff = false;
+                        break;
+                    default:
+                        break;
+                        
                 }
+                Refresh(Dir, cursor);
             }
         }
     }
