@@ -25,13 +25,13 @@ namespace OnLab
 
             c1.Simplify();
             c2.Simplify();
-            Complex c3 = c1 + c2;
+            
             Complex dif = c1 / c2;
             Complex mult = c1 * c2;
             Complex sum = c1 + c2;
-            Complex atr = c1 - c2;
+            Complex minus = c1 - c2;
             Console.WriteLine(sum);
-            Console.WriteLine(atr);
+            Console.WriteLine(minus);
             Console.WriteLine(mult);
             Console.WriteLine(dif);
             Console.ReadKey();

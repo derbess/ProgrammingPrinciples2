@@ -13,7 +13,7 @@ namespace _1stWork
         {
             string line = Console.ReadLine();
             string[] arr = line.Split(' ');
-            int sum = 0;
+            int sum ;
             for (int i = 0; i < arr.Length; i++)
             {
                 sum = int.Parse(arr[i]);

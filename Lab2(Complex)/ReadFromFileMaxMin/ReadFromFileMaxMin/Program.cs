@@ -15,19 +15,19 @@ namespace ReadFromFileMaxMin
             string text = System.IO.File.ReadAllText(@"C:\Users\User\Desktop\PP2 Labs\Lab2\MaxMinIn.txt");
 
             string[] arr = text.Split(' ');
-            int min = 1000000000;
-            int max = -111111111;
+            int min = int.Parse(arr[0]);
+            int max = int.Parse(arr[0]);
             int sum = 0;
             string mn = "", mx = "";
             for(int i = 0;i<=(arr.Length)-1;i++)
             {
                 sum = int.Parse(arr[i]);
-                if (sum < min)
+                if (sum <= min)
                 {
                     min = sum;
                     mn = arr[i];
                 }
-                if (sum > max)
+                if (sum >= max)
                 {
                     max = sum;
                     mx = arr[i];
