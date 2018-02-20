@@ -11,6 +11,7 @@ namespace ReadFromFilePrime
     {
         static void Main(string[] args)
         {
+            
             string ot = "";
             string text = System.IO.File.ReadAllText(@"C:\Users\User\Desktop\PP2 Labs\Lab2\PrimeIn.txt");
 
@@ -38,7 +39,9 @@ namespace ReadFromFilePrime
                     cnt = 0;
                 }
             }
-            System.IO.File.WriteAllText(@"C:\Users\User\Desktop\PP2 Labs\Lab2\PrimeOut.txt", ot);
+            StreamWriter a = new StreamWriter(@"C:\Users\User\Desktop\PP2 Labs\Lab2\PrimeOut.txt");
+            a.Write(ot);
+            a.Close();
         }
     }
 }

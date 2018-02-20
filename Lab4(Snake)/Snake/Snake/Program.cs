@@ -10,8 +10,8 @@ namespace Snake
     {
         static void Main(string[] args)
         {
-            Console.BackgroundColor = ConsoleColor.DarkYellow;
-            //Console.SetWindowSize(43, 20);
+            Console.BackgroundColor = ConsoleColor.White;
+            //Console.SetWindowSize(45, 20);
             int level = 1;
             Body snake = new Body();
             Wall wall = new Wall(level);
@@ -44,11 +44,11 @@ namespace Snake
                     level = 1;
                     wall = new Wall(level);
                 }
-               /* if (snake.cnt % 400 == 0)
+                if (snake.cnt % 400 == 0)
                 {
-                    level++;
+                    level = 2;
                     wall = new Wall(level);
-                }*/
+                }
 
                 Console.Clear();
                 snake.Draw();

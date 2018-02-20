@@ -38,15 +38,13 @@ namespace OnLab
         public static Complex operator + (Complex w1, Complex w2)
         { 
             int lll = LCM(w1.b, w2.b);
-            Complex w = new Complex(w1.a*(lll/w2.b) + w2.a*(lll/w1.b), lll);
+            Complex w = new Complex((w1.a * w2.b + w2.a * w1.b), (w1.b * w2.b));
             w.Simplify();
             return w;
         }
         public static Complex operator -(Complex w1, Complex w2)
         {
-            int lll = LCM(w1.b, w2.b);
-
-            Complex w = new Complex(w1.a * w2.b - w2.a * w1.b, lll);
+            Complex w = new Complex(w1.a * w2.b - w2.a * w1.b, w1.b * w2.b);
             w.Simplify();
             return w;
         }

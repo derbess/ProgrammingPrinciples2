@@ -12,7 +12,7 @@ namespace _1stWork
         static void Main(string[] args)
         {
             string line = Console.ReadLine();
-            string[] arr = line.Split(' ');
+            string[] arr = line.Split();
             int sum ;
             for (int i = 0; i < arr.Length; i++)
             {

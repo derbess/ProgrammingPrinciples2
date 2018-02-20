@@ -30,8 +30,8 @@ namespace Snake
         public Wall(int level)
         {
             body = new List<Point>();
-            sign = "o";
-            colour = ConsoleColor.Magenta;
+            sign = "O";
+            colour = ConsoleColor.Blue;
             StartLevel(level);
         }
         public void Draw()

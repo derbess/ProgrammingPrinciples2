@@ -27,7 +27,9 @@ namespace Snake
             {
                 body.Add(new Point(1, 1));
             }
-            for(int i=body.Count - 1; i>0; i--)
+           
+                
+            for(int i = body.Count - 1; i>0; i--)
             {
                 body[i].x = body[i - 1].x;
                 body[i].y = body[i - 1].y;

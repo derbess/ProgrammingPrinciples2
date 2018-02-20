@@ -15,7 +15,7 @@ namespace CircleWork
             double r = double.Parse(Console.ReadLine());
 
             Circle c = new Circle(r);
-            //c.findArea();
+            c.findArea();
 
             Console.WriteLine(c);
 

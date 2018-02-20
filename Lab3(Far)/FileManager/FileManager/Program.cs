@@ -10,34 +10,51 @@ namespace FileManager
 {
     class Program
     {
-        static void Refresh(DirectoryInfo directory, int cursor)
+        static int CONSOLE_SIZE = 30;
+        static void Refresh(DirectoryInfo directory, int cursor,int first)
         {
             Console.BackgroundColor = ConsoleColor.Black;
             Console.Clear();
             FileSystemInfo[] files = directory.GetFileSystemInfos();
-            for (int i = 0;i < files.Length; i++)
+            int index = 0;
+            for (int i = 0; i < files.Length; i++)
             {
-                if(files[i].GetType()==typeof(FileSystemInfo))
+                if (index == cursor)
                 {
-                    Console.ForegroundColor = ConsoleColor.Magenta;
+                    Console.BackgroundColor = ConsoleColor.White;
+                    Console.ForegroundColor = ConsoleColor.DarkBlue;
+                }
+                else if (files[i].GetType()==typeof(DirectoryInfo))
+                {
+                    Console.ForegroundColor = ConsoleColor.White;
                 }
                 else
-                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.ForegroundColor = ConsoleColor.Magenta;
                 if (i == cursor)
+                {
+
+                    Console.ForegroundColor = ConsoleColor.Black;
                     Console.BackgroundColor = ConsoleColor.Yellow;
+                }
                 else
                     Console.BackgroundColor = ConsoleColor.Black;
-                Console.WriteLine(files[i].Name);
+                
+                if (index >= first && index <= first + CONSOLE_SIZE)
+                    Console.WriteLine(files[i].Name);
+                index++;
+
             }
 
 
         }
         static void Main(string[] args)
         {
+            Console.CursorVisible = false;
             DirectoryInfo Dir = new DirectoryInfo(@"C:\");
             int cursor = 0;
-            int n = Dir.GetFileSystemInfos().Length - 1;
-            Refresh(Dir, cursor);
+            int first = 0;
+            int n = Dir.GetFileSystemInfos().Length ;
+            Refresh(Dir, cursor,first);
             bool onoff = true;
             while(onoff)
             {
@@ -47,18 +64,36 @@ namespace FileManager
                     case ConsoleKey.UpArrow:
                         cursor--;
                         if (cursor < 0)
-                            cursor = n;
+                        {
+                            cursor = n - 1;
+                            first = cursor - CONSOLE_SIZE;
+                        }
+                        if (cursor < first)
+                        {
+                            first--;
+                        }
                         break;
                     case ConsoleKey.DownArrow:
                         cursor++;
-                        cursor = cursor % n;
+                        if (cursor == n)
+                        {
+
+                            cursor = 0;
+                            first = 0; 
+
+                        }
+                        if (cursor > first + CONSOLE_SIZE)
+                        {
+                            first++;
+                        }
                         break;
                     case ConsoleKey.Enter:
                         if (Dir.GetFileSystemInfos()[cursor].GetType() == typeof(DirectoryInfo))
                         {
                             Dir = new DirectoryInfo(Dir.GetFileSystemInfos()[cursor].FullName);
                             cursor = 0;
-                            n = Dir.GetFileSystemInfos().Length - 1;
+                            n = Dir.GetFileSystemInfos().Length ;
+                            first = 0;
                         }
                         else
                         {
@@ -76,7 +111,8 @@ namespace FileManager
                         {
                             Dir = Dir.Parent;
                             cursor = 0;
-                            n = Dir.GetFileSystemInfos().Length-1;
+                            n = Dir.GetFileSystemInfos().Length;
+                            first = 0;
                         }
                         break;
                     case ConsoleKey.Escape:
@@ -86,7 +122,7 @@ namespace FileManager
                         break;
                         
                 }
-                Refresh(Dir, cursor);
+                Refresh(Dir, cursor,first);
             }
         }
     }
