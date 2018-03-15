@@ -10,14 +10,15 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace Snake
 {
+
     class Program
     {
         static void Main(string[] args)
         {
             Game game = new Game();
-            game.GameMenu();
+            game.GameMenu();//
             Console.Clear();
-            game.GameInit();
+            game.GameInit();//
             while (game.gameover)
             {
 
@@ -29,13 +30,21 @@ namespace Snake
                     game.score++;
                     if (game.score % 3 == 0)
                     {
-                        Game.walls.StartLevel(++game.level);
+                        ++Game.level;
+                        Console.Clear();
+                        Game.CreateObjects();
+                        Game.snake.AddElements();
+                       
+                        Game.walls.StartLevel(Game.level);
+
                         Game.walls.Draw();
+                        Game.food.FoodGenerate();
+                        Game.food.Draw();
                     }
                 }
                 if (Game.snake.EatBody() || Game.snake.EatWalls())
                 {
-                    game.GameEnd();
+                   // game.GameEnd();
                 }
                 if (Console.KeyAvailable)
                 {
@@ -48,9 +57,12 @@ namespace Snake
                 }
                 Game.snake.Move();
                 Game.snake.Draw();
-                Thread.Sleep(50);
+                Thread.Sleep(100);
             }
-
+            Console.SetCursorPosition(Console.WindowWidth / 2, Console.WindowHeight / 2);
+            Console.WriteLine("Game Over");
+           
+            Console.ReadKey();
 
         }
     }

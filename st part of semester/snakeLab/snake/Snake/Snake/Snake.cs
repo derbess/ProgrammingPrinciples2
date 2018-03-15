@@ -26,7 +26,7 @@ namespace Snake
             head = body.Last();
             tail = body.First();
             head.color = ConsoleColor.Green;
-        }
+        }//
         int a = 2;
         public void HandleDirection(ConsoleKeyInfo key)
         {
@@ -78,12 +78,14 @@ namespace Snake
                     p.color = ConsoleColor.Green;
                 else
                     p.color = ConsoleColor.Red;
+
                 Console.ForegroundColor = p.color;
                 Console.SetCursorPosition(p.x, p.y);
                 Console.Write(p.sym);
             }
         }
-        public void Grow()
+
+        public void Grow()//
         {
             Point newTail = new Point(tail);
             switch (direction)
@@ -104,12 +106,14 @@ namespace Snake
             tail = newTail;
             body.Insert(0, newTail);
         }
+
         public bool EatFood()
         {
             if (Game.food.food.x == head.x && Game.food.food.y == head.y)
                 return true;
             return false;
         }
+
         public void Move()
         {
             tail.Clear();
@@ -120,6 +124,16 @@ namespace Snake
                 body[i].y = body[i + 1].y;
                 body[i].color = ConsoleColor.Red;
             }
+            if (head.x < 1)
+                head.x = Console.WindowWidth - 1;
+            if (head.x > Console.WindowWidth - 1)
+                head.x = 1;
+
+            if (head.y < 1)
+                head.y = Console.WindowHeight - 1;
+            if (head.y > Console.WindowHeight - 1)
+                head.y = 1;
+
             switch (direction)
             {
                 case Direction.RIGHT:
@@ -134,8 +148,10 @@ namespace Snake
                 case Direction.DOWN:
                     head.y = head.y + 1;
                     break;
-            }
+            }       
+          
         }
+
         public bool EatBody()
         {
             for (int i = 0; i < body.Count - 1; i++)
@@ -145,6 +161,7 @@ namespace Snake
             }
             return false;
         }
+
         public bool EatWalls()
         {
             for (int i = 0; i < Game.walls.body.Count; i++)
