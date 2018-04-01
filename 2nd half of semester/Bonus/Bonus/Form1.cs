@@ -13,18 +13,8 @@ namespace Bonus
             InitializeComponent();
 
         }
-       // Button play = new Button();
         int cnt = 0;
         List<Button> body = new List<Button>();
-
-       /* private void Form1_Load(object sender, EventArgs e)
-        {
-            gamer.Location = new Point(30, 30);
-            gamer.Size = new Size(20, 20);
-            Controls.Add(gamer);
-        }*/
-
-        
         
 
         private void forfall_Tick(object sender, EventArgs e)
