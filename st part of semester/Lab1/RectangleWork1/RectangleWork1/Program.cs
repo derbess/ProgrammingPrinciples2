@@ -14,7 +14,7 @@ namespace RectangleWork1
             int h = int.Parse(Console.ReadLine());
 
             Rectangle c = new Rectangle(w, h);
-            //c.findArea();
+            
 
             Console.WriteLine(c);
             Console.ReadKey();
